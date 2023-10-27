@@ -86,14 +86,14 @@ print()
 print("Задание 5")
 cursor.execute('''
 SELECT row_number() OVER win AS "№",
-       "Достоевский Ф.М." AS "Автор",
+       "Булгаков М.А." AS "Автор",
 	   book.title AS "Книга",
        book.amount AS "Кол-во",
        rank() OVER win AS "Ранг",
        cume_dist() OVER win AS "Распределение",
        percent_rank() OVER win AS "Ранг%"
 FROM author, book
-WHERE author.author_id = book.author_id AND author.name_author = "Достоевский Ф.М."
+WHERE author.author_id = book.author_id AND author.name_author = "Булгаков М.А."
 WINDOW win AS (ORDER BY book.amount);
 ''')
 res = cursor.fetchall()
