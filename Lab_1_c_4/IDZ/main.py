@@ -1,4 +1,5 @@
 import sqlite3
+import pandas as pd
 
 '''
 con = sqlite3.connect("storeDB.db")
@@ -15,22 +16,23 @@ cursor = con.cursor()
 
 # Запросы к БД
 print("Задание 1")
-cursor.execute('''
+df1 = pd.read_sql('''
 SELECT buy_step.buy_id, buy_step.step_id, city.name_city
 FROM buy_step, city
 WHERE buy_step.step_id = 3
 ORDER BY name_city ASC, buy_id ASC;
-''')
-res = cursor.fetchall()
+''', con)
+print(df1)
+'''res = cursor.fetchall()
 print([description[0] for description in cursor.description])
 for row in res:
-    print(row)
+    print(row)'''
 print()
 
 print("Задание 2")
-cursor.execute('''
-SELECT client.name_client,
-	   COUNT(DISTINCT buy_book.book_id)
+df1 = pd.read_sql('''
+SELECT client.name_client AS "Клиент",
+	   COUNT(DISTINCT buy_book.book_id) AS "Количество книг"
 FROM client, buy_book, buy
 WHERE buy.client_id = client.client_id
       AND buy.buy_id = buy_book.buy_id
@@ -41,15 +43,12 @@ FROM client
 WHERE client.client_id NOT IN (SELECT buy.client_id
                                FROM buy)
 ORDER BY client.name_client;
-''')
-res = cursor.fetchall()
-print([description[0] for description in cursor.description])
-for row in res:
-    print(row)
+''', con)
+print(df1)
 print()
 
 print("Задание 3")
-cursor.execute('''
+df1 = pd.read_sql('''
 SELECT author.name_author AS "Автор",
 	   SUM(buy_book.amount) AS "Количество_проданных_книг"
 FROM buy_book, author, book
@@ -60,11 +59,8 @@ HAVING SUM(buy_book.amount) > (SELECT SUM(buy_book.amount)
 							   FROM buy_book, book
 							   WHERE book.book_id = buy_book.book_id
 							   GROUP BY book.author_id);
-''')
-res = cursor.fetchall()
-print([description[0] for description in cursor.description])
-for row in res:
-    print(row)
+''', con)
+print(df1)
 print()
 
 print("Задание 4")
