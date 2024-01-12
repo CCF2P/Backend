@@ -20,14 +20,12 @@
     - destination_id (integer, FK) - внешний ключ, связанный с таблицей "destination"
     - airplane_id (integer, FK) - внешний ключ, связанный с таблицей "airplane"
 5. Пассажиры (passenger)
-    - passenger_id (integer, PK) - идентификатор пассажира
+    - passenger_passport_id (integer, PK) - идентификатор пассажира
     - name (VARCHAR(100)) - имя пассажира
-    - passport (integer) - серия и номер паспорта пассажира
 6. Билет (ticket)
     - ticket_id (integer, PK) - идентификатор пассажира
     - flight_id (integer, FK) - внешний ключ, связанный с таблицей "flight"
     - passenger_id (integer, FK) - внешний ключ, связанный с таблицей "passenger"
-    - departure_number (integer) - номер вылета
     - price (integer) - цена билета
     - departure_date (datatime) - время и дата вылета
     - date_sale (datatime) - время и дата продажи
