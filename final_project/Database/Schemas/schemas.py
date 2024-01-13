@@ -33,7 +33,7 @@ class AIRPLANE(Base):
         autoincrement=True
     )
     type = Column(String(100))
-    number = Column(Integer)
+    condition = Column(Integer)
     maintenance_crew = Column(ForeignKey(MAINTENANCE_CREW.maintenance_crew_id))
 
 class DESTINATION(Base):

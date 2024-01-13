@@ -19,9 +19,9 @@ passenger_router = APIRouter(
 
 
 def verify_passenger(role) -> bool:
-    if role != "passenger" or role != "admin":
-        return False
-    return True
+    if role == "passenger" or role == "admin":
+        return True
+    return False
 
 
 def get_db():

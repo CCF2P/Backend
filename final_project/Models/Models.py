@@ -19,7 +19,7 @@ class KeycloakToken(BaseModel):
     scope: str
 
 
-class Admin():
+class AdminModel(BaseModel):
     pass
 
 
@@ -36,8 +36,16 @@ class TicketModel(BaseModel):
     date_sale: str
 
 
-class MaintenanceCrewModel():
-    pass
+class MaintenanceCrewModel(BaseModel):
+    id_number: int
+    name: str
+
+
+class AirplaneModel(BaseModel):
+    id_number: int
+    type: str
+    condition: str
+    maintenance_crew: int
 
 
 class KeycloakJWTBearerHandler(HTTPBearer):
@@ -45,16 +53,19 @@ class KeycloakJWTBearerHandler(HTTPBearer):
         super(KeycloakJWTBearerHandler, self).__init__()
 
     async def __call__(self, request: Request):
-        KeycloakJWTBearerHandler._check_request_headers(request._headers)
+        try:
+            KeycloakJWTBearerHandler._check_request_headers(request._headers)
 
-        credentials: HTTPAuthorizationCredentials = await super(KeycloakJWTBearerHandler, self).__call__(request)
-        if not credentials:
-            raise HTTPException(status_code=403, detail="Invalid authorization code.")
-        if not credentials.scheme == "Bearer":
-            raise HTTPException(status_code=403, detail="Invalid authentication scheme.")
+            credentials: HTTPAuthorizationCredentials = await super(KeycloakJWTBearerHandler, self).__call__(request)
+            if not credentials:
+                raise HTTPException(status_code=403, detail="Invalid authorization code.")
+            if not credentials.scheme == "Bearer":
+                raise HTTPException(status_code=403, detail="Invalid authentication scheme.")
         
-        role = KeycloakJWTBearerHandler._verify_jwt(credentials.credentials)
-        return role
+            role = KeycloakJWTBearerHandler._verify_jwt(credentials.credentials)
+            return role
+        finally:
+            raise HTTPException(status_code=500, detail="Something went wrong")
     
     @staticmethod
     def _verify_jwt(credentials):
