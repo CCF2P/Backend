@@ -124,32 +124,3 @@ def delete_ticket(
     db.commit()
 
     return {"message": "Билет успешно удален"}
-
-
-@passenger_router.put("/passenger")
-def update_passenger_data(
-    passenger_data: PassengerModel,
-    new_passenger_data: PassengerModel,
-    db: Session = Depends(get_db),
-    role=Depends(KeycloakJWTBearerHandler())
-):
-    # Проверка авторизации
-    if not verify_passenger(role):
-        raise HTTPException(status_code=403, detail={"message": "Denied permission"})
-    
-    # Проверяем есть ли пассажир в базе данных
-    passenger = db.query(PASSENGER)\
-                  .filter((PASSENGER.passenger_passport_id == passenger_data.passport) &\
-                          (PASSENGER.name == passenger_data.name))\
-                  .first()
-    if passenger is None:
-        return JSONResponse(status_code=404, content={"message": "passenger is not found"})
-    
-    # Обновляем данные
-    passenger.name = new_passenger_data.name
-    passenger.passenger_passport_id = new_passenger_data.passport
-
-    # Сохраняем изменения в базу данных
-    db.commit()
-
-    return {"message": "Данные пассажира успешно обновлены"}
