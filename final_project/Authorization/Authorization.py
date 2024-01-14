@@ -13,17 +13,13 @@ class KeycloakJWTBearerHandler(HTTPBearer):
 
     async def __call__(self, request: Request):
         try:
-            print("1")
             KeycloakJWTBearerHandler._check_request_headers(request._headers)
 
             credentials: HTTPAuthorizationCredentials = await super(KeycloakJWTBearerHandler, self).__call__(request)
-            print("2")
             if not credentials:
                 raise HTTPException(status_code=403, detail="Invalid authorization code.")
-            print("3")
             if not credentials.scheme == "Bearer":
                 raise HTTPException(status_code=403, detail="Invalid authentication scheme.")
-            print("4")
             role = KeycloakJWTBearerHandler._verify_jwt(credentials.credentials)
             return role
         except:
