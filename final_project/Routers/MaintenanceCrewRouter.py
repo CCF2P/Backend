@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from Database.createDatabase import *
 from Database.Schemas.schemas import *
 from Models.Models import *
+from Authorization.Authorization import KeycloakJWTBearerHandler, HTTPException
 
 import json
 
@@ -61,7 +62,7 @@ def get_crew_airlanes(
         d = dict()
         d["airplane_id"] = a.airplane_id
         d["type"] = a.type
-        d["number"] = a.number
+        d["condition"] = a.condition
         d["maintenance_crew"] = a.maintenance_crew
         data["airplanes"].append(d)
 

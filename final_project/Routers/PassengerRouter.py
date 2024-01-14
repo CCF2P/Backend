@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from Database.createDatabase import *
 from Database.Schemas.schemas import *
 from Models.Models import *
+from Authorization.Authorization import KeycloakJWTBearerHandler, HTTPException
 
 import json
 
