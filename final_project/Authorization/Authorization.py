@@ -12,18 +12,16 @@ class KeycloakJWTBearerHandler(HTTPBearer):
         super(KeycloakJWTBearerHandler, self).__init__()
 
     async def __call__(self, request: Request):
-        try:
-            KeycloakJWTBearerHandler._check_request_headers(request._headers)
+        print(request._headers)
+        KeycloakJWTBearerHandler._check_request_headers(request._headers)
 
-            credentials: HTTPAuthorizationCredentials = await super(KeycloakJWTBearerHandler, self).__call__(request)
-            if not credentials:
-                raise HTTPException(status_code=403, detail="Invalid authorization code.")
-            if not credentials.scheme == "Bearer":
-                raise HTTPException(status_code=403, detail="Invalid authentication scheme.")
-            role = KeycloakJWTBearerHandler._verify_jwt(credentials.credentials)
-            return role
-        except:
-            raise HTTPException(status_code=500, detail="Something went wrong")
+        credentials: HTTPAuthorizationCredentials = await super(KeycloakJWTBearerHandler, self).__call__(request)
+        if not credentials:
+            raise HTTPException(status_code=403, detail="Invalid authorization code.")
+        if not credentials.scheme == "Bearer":
+            raise HTTPException(status_code=403, detail="Invalid authentication scheme.")
+        role = KeycloakJWTBearerHandler._verify_jwt(credentials.credentials)
+        return role
     
     @staticmethod
     def _verify_jwt(credentials):
@@ -64,13 +62,16 @@ class KeycloakJWTBearerHandler(HTTPBearer):
         return True
 
     @staticmethod
-    def _decode_jwt(token):        
-        header = jwt.get_unverified_header(token)
-        data = jwt.decode(jwt=token,
-                        key="secret",
-                        algorithms=[ALGORITHM],
-                        options={"verify_signature": False},)
+    def _decode_jwt(token):
+        try:        
+            header = jwt.get_unverified_header(token)
+            data = jwt.decode(jwt=token,
+                              key="secret",
+                              algorithms=[ALGORITHM],
+                              options={"verify_signature": False},)
+        except Exception as e:
+            raise HTTPException(status_code=400, detail=f"{e}")
         
         payload = json.loads(json.dumps(data))
-
         return {"header": header, "payload": payload}
+        
