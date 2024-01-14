@@ -80,6 +80,37 @@ def buy_ticket(
     if not verify_passenger(role):
         raise HTTPException(status_code=403, detail={"message": "Denied permission"})
     
+    # Проверяем есть ли пассажир в базе данных
+    passenger = db.query(PASSENGER)\
+                  .filter(PASSENGER.passenger_passport_id == ticket_data.passenger_id)\
+                  .first()
+    if passenger is None:
+        return JSONResponse(status_code=404, content={"message": "Passenger is not found"})
+    
+    # Проверяем установлена ли цена билета
+    if ticket_data.price <= 0:
+        return JSONResponse(status_code=404, content={"message": "Uncorrect price for ticket"})
+    
+    # Проверяем, что есть дата вылета
+    if ticket_data.departure_date == "":
+        return JSONResponse(status_code=404, content={"message": "Uncorrect departure date"})
+    
+    # Проверяем, что есть дата покупки
+    if ticket_data.date_sale == "":
+        return JSONResponse(status_code=404, content={"message": "Uncorrect sale date"})
+
+    # Проверяем есть билет с текущим id в БД
+    tckt = db.query(TICKET)\
+             .filter(
+                 (TICKET.passenger_id == ticket_data.passenger_id) &
+                 (TICKET.flight_id == ticket_data.flight_id) &
+                 (TICKET.date_sale == ticket_data.date_sale) &
+                 (TICKET.departure_date == ticket_data.departure_date)
+             )\
+             .first()
+    if tckt is not None:
+        return JSONResponse(status_code=400, content={"message": "Ticket has already bought"})
+
     # Создание билета для занесения в БД
     ticket = TICKET(
         flight_id=ticket_data.flight_id,

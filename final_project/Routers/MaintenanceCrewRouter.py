@@ -69,7 +69,7 @@ def get_crew_airlanes(
     return json.loads(json.dumps(data, default=str))
 
 
-@maintenancne_crew_router.post("/fix")
+@maintenancne_crew_router.put("/fix")
 def fix_airplane(
     airplane_data: AirplaneModel,
     mt_crew_id: int,
