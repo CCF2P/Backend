@@ -1,0 +1,21 @@
+<mxfile host="Electron" modified="2024-01-15T06:04:07.939Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="qL8zWpJAioAjLB-Hp1Js" version="22.1.2" type="device">
+  <diagram name="Бригадир" id="gbYcg71emGCIpF23BY0E">
+    <mxGraphModel dx="1050" dy="629" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="B1rNJe0j7EwULdUaKIZM-1" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
+          <mxGeometry x="390" y="40" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="B1rNJe0j7EwULdUaKIZM-2" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="B1rNJe0j7EwULdUaKIZM-1" edge="1" target="KCnsdSnW5oyPsIsuhHRU-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="405" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KCnsdSnW5oyPsIsuhHRU-5" value="Окно &quot;Самолеты&quot;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="345" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

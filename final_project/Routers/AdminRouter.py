@@ -34,6 +34,9 @@ def get_db():
         db.close()
 
 
+# ============================== Менеджмент самолетов ==============================
+
+
 @admin_router.post("/crewAirplane")
 def get_crew_airplane(
     mt_crew_data: MaintenanceCrewModel,
@@ -137,6 +140,9 @@ def delete_airplane(
     return {"message": "Airplane has been successfully deleted"}
 
 
+# ============================== Менеджмент пассажиров ==============================
+
+
 @admin_router.post("/passenger")
 def add_passanger(
     passenger_data: PassengerModel,
@@ -238,6 +244,9 @@ def delete_passanger(
     db.commit()
 
     return {"message": "The passenger has been deleted successfully"}
+
+
+# ============================== Менеджмент билетов ==============================
 
 
 @admin_router.get("/alltickets")

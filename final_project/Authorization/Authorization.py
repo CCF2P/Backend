@@ -38,7 +38,6 @@ class KeycloakJWTBearerHandler(HTTPBearer):
         else:
             raise HTTPException(status_code=403, detail="The user does not have the required role")
 
-
     @staticmethod
     def _check_request_headers(headers):
         # check there is an authorization header
@@ -74,4 +73,3 @@ class KeycloakJWTBearerHandler(HTTPBearer):
         
         payload = json.loads(json.dumps(data))
         return {"header": header, "payload": payload}
-        
