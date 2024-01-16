@@ -141,6 +141,30 @@ def delete_airplane(
 
 
 # ============================== Менеджмент пассажиров ==============================
+@admin_router.get("/passenger")
+def get_passenger(
+    db: Session = Depends(get_db),
+    role=Depends(KeycloakJWTBearerHandler())
+):
+    # Проверка авторизации
+    if not verify_admin(role):
+        raise HTTPException(status_code=403, detail={"message": "Denied permission"})
+    
+    # Проверяем есть ли пассажир в базе данных
+    passengers = db.query(PASSENGER)\
+                  .all()
+    if passengers is None:
+        return JSONResponse(status_code=404, content={"message": "passenger is not found"})
+    
+    data = dict()
+    data["airplanes"] = list()
+    for p in passengers:
+        d = dict()
+        d["passenger_passport"] = p.passenger_passport_id
+        d["name"] = p.name
+        data["airplanes"].append(d)
+
+    return json.loads(json.dumps(data, default=str))
 
 
 @admin_router.post("/passenger")

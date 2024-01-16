@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-01-16T08:12:27.177Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="90wZyu8u8OdSPVtfyHY2" version="22.1.2" type="device" pages="4">
+<mxfile host="Electron" modified="2024-01-16T08:09:56.631Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="4Hbs1SlU5lSslmy_552r" version="22.1.2" type="device" pages="4">
   <diagram name="Бригадир" id="gbYcg71emGCIpF23BY0E">
     <mxGraphModel dx="1050" dy="629" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -162,7 +162,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="hzwR2oMl5jkMl-l0Z_36" name="Администратор">
-    <mxGraphModel dx="1877" dy="629" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2327" dy="899" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -208,28 +208,17 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="414" y="260" />
-              <mxPoint x="1050" y="260" />
+              <mxPoint x="910" y="260" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-4" value="" style="ellipse;fillColor=strokeColor;html=1;" vertex="1" parent="1">
           <mxGeometry x="399" y="220" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="MElDmwyiSrcS6Xdwy7wr-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MElDmwyiSrcS6Xdwy7wr-6" target="MElDmwyiSrcS6Xdwy7wr-85">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="60" y="350" />
-              <mxPoint x="-170" y="350" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-6" value="&quot;Список всех билетов&quot;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry y="280" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MElDmwyiSrcS6Xdwy7wr-7" target="MElDmwyiSrcS6Xdwy7wr-37">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="MElDmwyiSrcS6Xdwy7wr-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MElDmwyiSrcS6Xdwy7wr-7" target="MElDmwyiSrcS6Xdwy7wr-83">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-7" value="&quot;Список всех самолетов&quot;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -238,22 +227,11 @@
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MElDmwyiSrcS6Xdwy7wr-8" target="MElDmwyiSrcS6Xdwy7wr-52">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="MElDmwyiSrcS6Xdwy7wr-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MElDmwyiSrcS6Xdwy7wr-8" target="MElDmwyiSrcS6Xdwy7wr-81">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-8" value="&quot;Список обслуживающих бригад&quot;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="600" y="280" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="MElDmwyiSrcS6Xdwy7wr-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MElDmwyiSrcS6Xdwy7wr-9" target="MElDmwyiSrcS6Xdwy7wr-79">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1050" y="350" />
-              <mxPoint x="1290" y="350" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-9" value="&quot;Список всех пассажиров&quot;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="990" y="280" width="120" height="60" as="geometry" />
+          <mxGeometry x="850" y="280" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-10" value="Найти билет по паспорту" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-70" y="390" width="120" height="60" as="geometry" />
@@ -325,7 +303,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-37" value="Найти самолет по типу" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="260" y="390" width="120" height="60" as="geometry" />
+          <mxGeometry x="330" y="390" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MElDmwyiSrcS6Xdwy7wr-47" target="MElDmwyiSrcS6Xdwy7wr-49">
           <mxGeometry relative="1" as="geometry" />
@@ -361,31 +339,31 @@
           <mxGeometry x="330" y="640" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-52" value="Вывести список бригад" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="680" y="390" width="120" height="60" as="geometry" />
+          <mxGeometry x="600" y="390" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-54" value="Найти пассажира по паспорту" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="920" y="390" width="120" height="60" as="geometry" />
+          <mxGeometry x="780" y="390" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-55" value="Найти пассажира по ФИО" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1060" y="390" width="120" height="60" as="geometry" />
+          <mxGeometry x="920" y="390" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-56" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=strokeColor;rotation=90;" vertex="1" parent="1">
-          <mxGeometry x="1047.5" y="237.5" width="5" height="255" as="geometry" />
+          <mxGeometry x="907.5" y="237.5" width="5" height="255" as="geometry" />
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-57" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="MElDmwyiSrcS6Xdwy7wr-54">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="980" y="369" as="sourcePoint" />
-            <mxPoint x="1150" y="420" as="targetPoint" />
+            <mxPoint x="840" y="369" as="sourcePoint" />
+            <mxPoint x="1010" y="420" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-58" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="MElDmwyiSrcS6Xdwy7wr-55">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1120" y="370" as="sourcePoint" />
-            <mxPoint x="990" y="400" as="targetPoint" />
+            <mxPoint x="980" y="370" as="sourcePoint" />
+            <mxPoint x="850" y="400" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-59" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=strokeColor;rotation=90;" vertex="1" parent="1">
-          <mxGeometry x="1047.5" y="350" width="5" height="255" as="geometry" />
+          <mxGeometry x="907.5" y="350" width="5" height="255" as="geometry" />
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.517;entryY=0.772;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="MElDmwyiSrcS6Xdwy7wr-54" target="MElDmwyiSrcS6Xdwy7wr-59">
           <mxGeometry relative="1" as="geometry" />
@@ -407,8 +385,8 @@
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="MElDmwyiSrcS6Xdwy7wr-63" target="MElDmwyiSrcS6Xdwy7wr-4">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1200" y="555" />
-              <mxPoint x="1200" y="235" />
+              <mxPoint x="1070" y="555" />
+              <mxPoint x="1070" y="235" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -418,25 +396,25 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-63" value="Пассажиры найдены" style="html=1;whiteSpace=wrap;aspect=fixed;shape=isoRectangle;" vertex="1" parent="1">
-          <mxGeometry x="975" y="510" width="150" height="90" as="geometry" />
+          <mxGeometry x="835" y="510" width="150" height="90" as="geometry" />
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-64" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.48;exitY=0.499;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.501;entryY=-0.013;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="MElDmwyiSrcS6Xdwy7wr-59" target="MElDmwyiSrcS6Xdwy7wr-63">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="890" y="590" as="sourcePoint" />
-            <mxPoint x="940" y="540" as="targetPoint" />
+            <mxPoint x="750" y="590" as="sourcePoint" />
+            <mxPoint x="800" y="540" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MElDmwyiSrcS6Xdwy7wr-65" target="MElDmwyiSrcS6Xdwy7wr-72">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-65" value="Вывести найденных пассажиров" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="990" y="630" width="120" height="60" as="geometry" />
+          <mxGeometry x="850" y="630" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="MElDmwyiSrcS6Xdwy7wr-72" target="MElDmwyiSrcS6Xdwy7wr-4">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="880" y="785" />
-              <mxPoint x="880" y="235" />
+              <mxPoint x="1070" y="785" />
+              <mxPoint x="1070" y="235" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -448,18 +426,6 @@
         </mxCell>
         <mxCell id="MElDmwyiSrcS6Xdwy7wr-77" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
           <mxGeometry x="399" y="840" width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="MElDmwyiSrcS6Xdwy7wr-79" value="Добавить/Изменить данные пассажира" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1230" y="390" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="MElDmwyiSrcS6Xdwy7wr-81" value="Добавить/изменить данные бригады" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="540" y="390" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="MElDmwyiSrcS6Xdwy7wr-83" value="Добавить/изменить данные самолета" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="399" y="390" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="MElDmwyiSrcS6Xdwy7wr-85" value="Добавить/изменить данные билета" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-230" y="390" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
