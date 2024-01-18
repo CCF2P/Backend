@@ -8,7 +8,6 @@ from Routers.AdminRouter import admin_router
 
 app = FastAPI()
 
-app.include_router(passenger_router)
 app.include_router(maintenancne_crew_router)
 app.include_router(admin_router)
 
