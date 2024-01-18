@@ -39,3 +39,4 @@ class AirplaneModel(BaseModel):
     type: str
     condition: str
     maintenance_crew: int
+    stage_id: int

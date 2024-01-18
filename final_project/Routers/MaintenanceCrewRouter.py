@@ -72,7 +72,6 @@ def get_crew_airlanes(
 @maintenancne_crew_router.put("/fix")
 def fix_airplane(
     airplane_data: AirplaneModel,
-    mt_crew_id: int,
     db: Session = Depends(get_db),
     role=Depends(KeycloakJWTBearerHandler())
 ):
@@ -80,16 +79,55 @@ def fix_airplane(
     if not verify_crew(role):
         raise HTTPException(status_code=403, detail={"message": "Denied permission"})
 
-    # Проверяем текущая ли бригада отвечает за самолет
+    # Проверяем, существет ли ремонтируемый самолет
     airplane = db.query(AIRPLANE)\
-                 .filter(AIRPLANE.airplane_id == airplane_data.id_number)\
+                 .filter((airplane_data.id_number == AIRPLANE.airplane_id) &
+                         (airplane_data.type == AIRPLANE.type) &
+                         (airplane_data.condition == AIRPLANE.condition) &
+                         (airplane_data.maintenance_crew == AIRPLANE.maintenance_crew) &
+                         (airplane_data.stage_id == AIRPLANE.stage_id))\
                  .first()
-    if airplane.maintenance_crew != mt_crew_id:
-        return JSONResponse(status_code=400,
-                            content={"message": "The current crew is not responsible for the selected airplane"})
+    if airplane is None:
+        return JSONResponse(status_code=400, content={"message": "airplane is not found"})
     
     # Чиним самолет
     airplane.condition = 100
     db.commit()
 
     return {"message": "The airplane has been successfully fixed"}
+
+
+@maintenancne_crew_router.put("/stage")
+def update_airplane_stage(
+    airplane_data: AirplaneModel,
+    new_stage: str,
+    db: Session = Depends(get_db),
+    role=Depends(KeycloakJWTBearerHandler())
+):
+     # Проверка авторизации
+    if not verify_crew(role):
+        raise HTTPException(status_code=403, detail={"message": "Denied permission"})
+
+    # Проверяем, что изменяемый самолет существет
+    airplane = db.query(AIRPLANE)\
+                 .filter((airplane_data.id_number == AIRPLANE.airplane_id) &
+                         (airplane_data.type == AIRPLANE.type) &
+                         (airplane_data.condition == AIRPLANE.condition) &
+                         (airplane_data.maintenance_crew == AIRPLANE.maintenance_crew) &
+                         (airplane_data.stage_id == AIRPLANE.stage_id))\
+                 .first()
+    if airplane is None:
+        return JSONResponse(status_code=404, content={"message": "airplane is not found"})
+    
+    # Проверяем, что новое состояния есть в БД
+    stage = db.query(STAGE)\
+              .filter(STAGE.name == new_stage)\
+              .first()
+    if stage is None:
+        return JSONResponse(status_code=404, content={"message": "new stage is not found"})
+    
+    # Изменяем состояние самолета
+    airplane.stage_id = stage.stage_id
+    db.commit()
+
+    return {"message": "The stage of airplane has been successfully updated"}

@@ -70,6 +70,32 @@ def get_crew_airplane(
     return json.loads(json.dumps(data, default=str))
 
 
+@admin_router.get("/airplane")
+def get_all_ariplanes(
+    db: Session = Depends(get_db),
+    role=Depends(KeycloakJWTBearerHandler())
+):
+    # Проверка авторизации
+    if not verify_admin(role):
+        raise HTTPException(status_code=403, detail={"message": "Denied permission"})
+    
+    # Получаем список всех самолетов
+    airplanes = db.query(AIRPLANE).all()
+    
+    data = dict()
+    data["airplanes"] = list()
+    for a in airplanes:
+        d = dict()
+        d["airplane_id"] = a.airplane_id
+        d["type"] = a.type
+        d["condition"] = a.condition
+        d["maintenance_crew"] = a.maintenance_crew
+        d["stage_id"] = a.stage_id
+        data["airplanes"].append(d)
+
+    return json.loads(json.dumps(data, default=str))
+
+
 @admin_router.post("/addAirplane")
 def add_airplane(
     airplane_data: AirplaneModel,
