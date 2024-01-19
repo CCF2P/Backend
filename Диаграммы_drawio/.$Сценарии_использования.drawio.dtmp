@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-01-19T06:10:47.160Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="QkCZ8pfsF0d5t7CdYRDF" version="22.1.2" type="device" pages="6">
+<mxfile host="Electron" modified="2024-01-19T06:11:20.778Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="GJv4lhE3d9R7_IC8Hk7r" version="22.1.2" type="device" pages="6">
   <diagram name="Бригадир" id="gbYcg71emGCIpF23BY0E">
     <mxGraphModel dx="1050" dy="629" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -536,7 +536,7 @@
             <mxPoint x="345" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="79Ocvjg2bzG3heScAZZd-3" value="Список обслуживающих бригад" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="79Ocvjg2bzG3heScAZZd-3" value="Просмотр обслуживающих бригад" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="500" y="120" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="e3IQphI2aG3IAENoMa7S-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="79Ocvjg2bzG3heScAZZd-6" target="e3IQphI2aG3IAENoMa7S-2" edge="1">
@@ -547,7 +547,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="79Ocvjg2bzG3heScAZZd-6" value="Вывести список бригад" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="79Ocvjg2bzG3heScAZZd-6" value="Список бригад" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="510" y="240" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="e3IQphI2aG3IAENoMa7S-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="ZRrAMDqMyjH8-Q7Lnm2d-1" target="e3IQphI2aG3IAENoMa7S-2" edge="1">
